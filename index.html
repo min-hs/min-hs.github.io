@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Systems Engineer - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+        }
+        .tech-badge {
+            transition: all 0.2s ease;
+        }
+        .tech-badge:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold gradient-text">Portfolio</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">About</a>
+                    <a href="#experience" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Experience</a>
+                    <a href="#skills" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Skills</a>
+                    <a href="#education" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Education</a>
+                    <a href="#contact" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</a>
+                </div>
+                <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="mb-8">
+                    <div class="w-32 h-32 mx-auto bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center text-white text-4xl font-bold">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Embedded Systems</span><br>
+                    <span class="text-gray-900 dark:text-white">Engineer</span>
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+                    4년간의 임베디드 시스템 개발 경험을 바탕으로 IoT, 네트워크, 클라우드 연동 솔루션을 개발하는 엔지니어입니다.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        Contact Me
+                    </a>
+                    <a href="#experience" class="border-2 border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        View Experience
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">About Me</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    임베디드 시스템과 IoT 기술에 열정을 가진 엔지니어로, 혁신적인 솔루션 개발에 전념하고 있습니다.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Personal Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar-alt text-primary-600 w-6"></i>
+                            <span class="ml-3">1992년 09월 08일</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-primary-600 w-6"></i>
+                            <span class="ml-3">서울 광진구 용마산로 16-1</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-primary-600 w-6"></i>
+                            <span class="ml-3">gudtlr56@naver.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-briefcase text-primary-600 w-6"></i>
+                            <span class="ml-3">총 4년 경력</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-6">Core Competencies</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                            <span>Embedded System 개발 (Linux, FreeRTOS, NON-OS)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                            <span>C, Python 기반 펌웨어 개발</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                            <span>ARM Cortex-M 계열 개발</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                            <span>Network 프로토콜 개발 및 분석</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                            <span>IoT 클라우드 연동 (Azure, AWS)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Experience</h2>
+                <p class="text-gray-600 dark:text-gray-300">WIZnet에서의 4년간의 연구개발 경험</p>
+            </div>
+            
+            <div class="mb-12">
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary-600">연구원 (팀원)</h3>
+                            <p class="text-xl font-semibold">WIZnet (위즈네트) - 기술연구소</p>
+                        </div>
+                        <div class="text-gray-600 dark:text-gray-300 mt-2 md:mt-0">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            2021.05 - 2025.05 (4년)
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Internet connectivity를 위한 Embedded network solution을 제공하는 기업 (매출: 약200억원, 종업원수: 30명)
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg card-hover">
+                    <h4 class="text-xl font-bold mb-4 text-primary-600">
+                        <i class="fas fa-network-wired mr-2"></i>
+                        Ethernet Chip TCP/IP Stack 검증
+                    </h4>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        네트워크 기반 신규 디자인 Ethernet chip hardwired TCP/IP stack 검증 및 성능 테스트
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">C</span>
+                        <span class="tech-badge bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="tech-badge bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">TCP/IP</span>
+                        <span class="tech-badge bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">Ethernet</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                        <li>? TCP/IP stack debugging 및 검증</li>
+                        <li>? Python aging test program 구현</li>
+                        <li>? 네트워크 성능 테스트 수행</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg card-hover">
+                    <h4 class="text-xl font-bold mb-4 text-primary-600">
+                        <i class="fas fa-microchip mr-2"></i>
+                        J-Link SWD 프로토콜 분석
+                    </h4>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        J-Link 장비를 활용한 SWD 프로토콜 분석 및 ATE 적용 가능한 벡터 파일 생성
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-1 rounded-full text-sm">Linux</span>
+                        <span class="tech-badge bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="tech-badge bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">C/C++</span>
+                        <span class="tech-badge bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-3 py-1 rounded-full text-sm">ARM SWD</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                        <li>? ARM 기반 SWD 프로토콜 분석</li>
+                        <li>? ATE 적용 벡터 검증 테스트 환경 구축</li>
+                        <li>? Raspberry Pi 4에서 시뮬레이션 수행</li>
+                    </ul>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg card-hover">
+                    <h4 class="text-xl font-bold mb-4 text-primary-600">
+                        <i class="fas fa-car mr-2"></i>
+                        SK Planet ARHIS 프로젝트
+                    </h4>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        음향 기반 도로 노면 검지 솔루션 - AI가 차량 주행 음향을 분석하여 블랙아이스 등 도로 상태를 실시간 탐지
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-1 rounded-full text-sm">Linux</span>
+                        <span class="tech-badge bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="tech-badge bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm">Shell Script</span>
+                        <span class="tech-badge bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 px-3 py-1 rounded-full text-sm">AI/ML</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                        <li>? 음향 신호 전처리 및 노이즈 제거 기술 개발</li>
+                        <li>? 디바이스 생산시스템 및 유지보수 시스템 구축</li>
+                        <li>? 국내외 전체 디바이스 관리 및 운용</li>
+                        <li>? 운영 시스템 연동 및 후처리 알고리즘 적용</li>
+                    </ul>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg card-hover">
+                    <h4 class="text-xl font-bold mb-4 text-primary-600">
+                        <i class="fas fa-water mr-2"></i>
+                        양양 스마트타운챌린지 프로젝트
+                    </h4>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        IoT 측정기를 통한 남대천 수질, 수위, 생태환경 데이터 수집·분석 및 위험 예지 모델 개발
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-1 rounded-full text-sm">Linux Embedded</span>
+                        <span class="tech-badge bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="tech-badge bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">MQTT</span>
+                        <span class="tech-badge bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">SFTP</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                        <li>? 다분광 카메라 수질 이미지 데이터 수집 및 전처리</li>
+                        <li>? 양양 IoT 서버 연동 및 녹조 상태 업데이트</li>
+                        <li>? MQTT, SFTP 네트워크 프로토콜 활용</li>
+                    </ul>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg card-hover">
+                    <h4 class="text-xl font-bold mb-4 text-primary-600">
+                        <i class="fas fa-cloud mr-2"></i>
+                        Raspberry Pi Pico IoT Cloud 연동
+                    </h4>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Raspberry Pi Pico 기반 Ethernet 및 Wi-Fi 제품의 클라우드 서비스 연동
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">Azure IoT Hub</span>
+                        <span class="tech-badge bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">AWS IoT Core</span>
+                        <span class="tech-badge bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Raspberry Pi Pico</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                        <li>? Azure 디바이스 연결 서비스 기획</li>
+                        <li>? AWS 디바이스 연결 서비스 기획</li>
+                        <li>? 클라우드 인증 및 연동 구현</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Technical Skills</h2>
+                <p class="text-gray-600 dark:text-gray-300">전문 기술 및 도구</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programming Languages -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-code text-4xl text-primary-600 mb-4"></i>
+                        <h3 class="text-xl font-bold">Programming Languages</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span>C</span>
+                            <div class="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="bg-primary-600 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Python</span>
+                            <div class="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="bg-primary-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Shell Script</span>
+                            <div class="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="bg-primary-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Operating Systems -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-desktop text-4xl text-primary-600 mb-4"></i>
+                        <h3 class="text-xl font-bold">Operating Systems</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-1 rounded-full text-sm">Linux</span>
+                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">FreeRTOS</span>
+                        <span class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm">NON-OS</span>
+                    </div>
+                </div>
+
+                <!-- Network & Communication -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-network-wired text-4xl text-primary-600 mb-4"></i>
+                        <h3 class="text-xl font-bold">Network & Communication</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">TCP/IP</span>
+                        <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">MQTT</span>
+                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">HTTP</span>
+                        <span class="bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-1 rounded-full text-sm">SSL/TLS</span>
+                        <span class="bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">Ethernet</span>
+                        <span class="bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 px-3 py-1 rounded-full text-sm">Wi-Fi</span>
+                    </div>
+                </div>
+
+                <!-- Cloud Platforms -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-cloud text-4xl text-primary-600 mb-4"></i>
+                        <h3 class="text-xl font-bold">Cloud Platforms</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">Microsoft Azure</span>
+                        <span class="bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">AWS</span>
+                        <span class="bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 px-3 py-1 rounded-full text-sm">IoT Hub</span>
+                        <span class="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-3 py-1 rounded-full text-sm">IoT Core</span>
+                    </div>
+                </div>
+
+                <!-- Development Tools -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-tools text-4xl text-primary-600 mb-4"></i>
+                        <h3 class="text-xl font-bold">Development Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm">Git/GitHub</span>
+                        <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">CMake</span>
+                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">STM32CubeIDE</span>
+                        <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">VS Code</span>
+                    </div>
+                </div>
+
+                <!-- Hardware & Debug Tools -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-microchip text-4xl text-primary-600 mb-4"></i>
+                        <h3 class="text-xl font-bold">Hardware & Debug</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-1 rounded-full text-sm">ARM Cortex-M</span>
+                        <span class="bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">J-Link</span>
+                        <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Logic Pro</span>
+                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">Wireshark</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Education</h2>
+                <p class="text-gray-600 dark:text-gray-300">전문 교육 과정</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">임베디드 시스템</h3>
+                            <p class="text-gray-600 dark:text-gray-300">한컴 MDS아카데미</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2020.07 - 2020.12</span>
+                        <span class="ml-4 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-2 py-1 rounded text-sm">760시간</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>? 임베디드 C 프로그래밍</li>
+                        <li>? 임베디드 시스템 이해와 활용</li>
+                        <li>? 리눅스 커널 포팅과 디바이스 드라이버 제어</li>
+                        <li>? IoT 네트워크 프로그래밍</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Linux/ROS 기반 IoT/AI</h3>
+                            <p class="text-gray-600 dark:text-gray-300">한컴 아카데미</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2020.12 - 2021.04</span>
+                        <span class="ml-4 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-2 py-1 rounded text-sm">756시간</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>? Linux 시스템 프로그래밍</li>
+                        <li>? ROS (Robot Operating System)</li>
+                        <li>? IoT 시스템 개발</li>
+                        <li>? 기초적인 머신러닝/딥러닝</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    새로운 기회나 협업에 관심이 있으시면 언제든 연락해 주세요.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-8">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center text-white mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Email</p>
+                                    <p class="text-gray-600 dark:text-gray-300">gudtlr56@naver.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center text-white mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Location</p>
+                                    <p class="text-gray-600 dark:text-gray-300">서울 광진구 용마산로 16-1</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center text-white mr-4">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Experience</p>
+                                    <p class="text-gray-600 dark:text-gray-300">4년 임베디드 시스템 개발</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-6">Areas of Expertise</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center p-4 bg-white dark:bg-gray-900 rounded-lg">
+                                <i class="fas fa-microchip text-2xl text-primary-600 mb-2"></i>
+                                <p class="font-semibold text-sm">Embedded Systems</p>
+                            </div>
+                            <div class="text-center p-4 bg-white dark:bg-gray-900 rounded-lg">
+                                <i class="fas fa-network-wired text-2xl text-primary-600 mb-2"></i>
+                                <p class="font-semibold text-sm">Network Programming</p>
+                            </div>
+                            <div class="text-center p-4 bg-white dark:bg-gray-900 rounded-lg">
+                                <i class="fas fa-cloud text-2xl text-primary-600 mb-2"></i>
+                                <p class="font-semibold text-sm">IoT Cloud Integration</p>
+                            </div>
+                            <div class="text-center p-4 bg-white dark:bg-gray-900 rounded-lg">
+                                <i class="fas fa-cogs text-2xl text-primary-600 mb-2"></i>
+                                <p class="font-semibold text-sm">Firmware Development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4 gradient-text">Embedded Systems Engineer</h3>
+                <p class="text-gray-400 mb-6">혁신적인 임베디드 솔루션으로 더 나은 미래를 만들어갑니다.</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="mailto:gudtlr56@naver.com" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-800 text-gray-400 text-sm">
+                    <p>&copy; 2025 Embedded Systems Engineer Portfolio. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.classList.toggle('dark', currentTheme === 'dark');
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
