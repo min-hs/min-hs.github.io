@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Systems Engineer - Portfolio</title>
+    <meta name="description" content="ë¯¼í˜•ì‹ - 4ë…„ ê²½ë ¥ì˜ ì„ë² ë””ë“œ ì‹œìŠ¤í…œ ì—”ì§€ë‹ˆì–´ í¬íŠ¸í´ë¦¬ì˜¤ - IoT, ë„¤íŠ¸ì›Œí¬, í´ë¼ìš°ë“œ ì—°ë™ ì „ë¬¸">
+    <meta name="keywords" content="ì„ë² ë””ë“œ ì‹œìŠ¤í…œ, IoT, ë„¤íŠ¸ì›Œí¬, í´ë¼ìš°ë“œ, ARM, C, Python, ë¯¼í˜•ì‹">
+    <title>ë¯¼í˜•ì‹ - Embedded Systems Engineer</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -12,143 +15,820 @@
                 extend: {
                     colors: {
                         primary: {
-                            50: '#f0f9ff',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            900: '#1e3a8a'
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052e16'
+                        },
+                        nvidia: {
+                            50: '#f0fdf4',
+                            500: '#76b900',
+                            600: '#5ea300',
+                            700: '#4a8b00',
+                            900: '#2a5000'
+                        },
+                        aws: {
+                            50: '#fff7ed',
+                            500: '#ff9500',
+                            600: '#ea7c00',
+                            700: '#c16200',
+                            900: '#7c2d12'
+                        },
+                        nike: {
+                            50: '#fafafa',
+                            500: '#000000',
+                            600: '#171717',
+                            700: '#262626',
+                            900: '#0a0a0a'
                         }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'Fira Code', 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', 'monospace'],
+                        'display': ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
+                        'slide-up': 'slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+                        'pulse-glow': 'pulseGlow 3s ease-in-out infinite alternate',
+                        'gradient-x': 'gradientX 8s ease infinite',
+                        'gradient-y': 'gradientY 6s ease infinite',
+                        'blob': 'blob 7s infinite',
+                        'tilt': 'tilt 10s infinite linear',
+                        'matrix': 'matrix 20s linear infinite',
+                        'particle': 'particle 15s linear infinite',
+                        'neural-net': 'neuralNet 12s ease-in-out infinite',
+                        'code-scroll': 'codeScroll 25s linear infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-20px) rotate(180deg)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(60px) scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'translateY(0) scale(1)' }
+                        },
+                        pulseGlow: {
+                            '0%': { boxShadow: '0 0 20px rgba(34, 197, 94, 0.4), 0 0 40px rgba(34, 197, 94, 0.2)' },
+                            '100%': { boxShadow: '0 0 40px rgba(34, 197, 94, 0.8), 0 0 80px rgba(34, 197, 94, 0.4)' }
+                        },
+                        gradientX: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' }
+                        },
+                        gradientY: {
+                            '0%, 100%': { backgroundPosition: '50% 0%' },
+                            '50%': { backgroundPosition: '50% 100%' }
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' }
+                        },
+                        tilt: {
+                            '0%, 50%, 100%': { transform: 'rotate(0deg)' },
+                            '25%': { transform: 'rotate(1deg)' },
+                            '75%': { transform: 'rotate(-1deg)' }
+                        },
+                        matrix: {
+                            '0%': { backgroundPosition: '0% 0%' },
+                            '100%': { backgroundPosition: '0% 100%' }
+                        },
+                        particle: {
+                            '0%': { transform: 'translateY(100vh) rotate(0deg)', opacity: '0' },
+                            '10%': { opacity: '1' },
+                            '90%': { opacity: '1' },
+                            '100%': { transform: 'translateY(-100vh) rotate(720deg)', opacity: '0' }
+                        },
+                        neuralNet: {
+                            '0%, 100%': { strokeDasharray: '0 100' },
+                            '50%': { strokeDasharray: '100 0' }
+                        },
+                        codeScroll: {
+                            '0%': { transform: 'translateY(0)' },
+                            '100%': { transform: 'translateY(-50%)' }
+                        }
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(34, 197, 94, 0.5)',
+                        'glow-lg': '0 0 40px rgba(34, 197, 94, 0.6)',
+                        'nvidia': '0 0 30px rgba(118, 185, 0, 0.5)',
+                        'aws': '0 0 30px rgba(255, 149, 0, 0.5)',
+                        'nike': '0 0 30px rgba(0, 0, 0, 0.8)',
+                        'enterprise': '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05)',
+                        'enterprise-dark': '0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1)'
                     }
                 }
             }
         }
     </script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
     <style>
+        :root {
+            --gradient-primary: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%);
+            --gradient-nvidia: linear-gradient(135deg, #76b900 0%, #5ea300 50%, #4a8b00 100%);
+            --gradient-aws: linear-gradient(135deg, #ff9500 0%, #ea7c00 50%, #c16200 100%);
+            --gradient-nike: linear-gradient(135deg, #000000 0%, #171717 50%, #262626 100%);
+            --gradient-mesh: radial-gradient(at 40% 20%, hsla(120, 100%, 50%, 0.1) 0px, transparent 50%),
+                            radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.1) 0px, transparent 50%),
+                            radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 0.1) 0px, transparent 50%),
+                            radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 0.1) 0px, transparent 50%),
+                            radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 0.1) 0px, transparent 50%),
+                            radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 0.1) 0px, transparent 50%),
+                            radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 0.1) 0px, transparent 50%);
+        }
+        
         .gradient-text {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #22c55e, #16a34a, #059669, #047857);
+            background-size: 400% 400%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            animation: gradientX 6s ease infinite;
         }
-        .card-hover {
-            transition: all 0.3s ease;
+        
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(22, 163, 74, 0.1));
+            border-radius: 24px;
+            padding: 2px;
         }
-        .card-hover:hover {
-            transform: translateY(-4px);
+        
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            padding: 2px;
+            background: var(--gradient-primary);
+            border-radius: inherit;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: xor;
+            -webkit-mask-composite: xor;
         }
-        .tech-badge {
-            transition: all 0.2s ease;
+        
+        .card-enterprise {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .tech-badge:hover {
-            transform: scale(1.05);
+        
+        .dark .card-enterprise {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .card-enterprise:hover {
+            transform: translateY(-12px) scale(1.03);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-enterprise);
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+        
+        .dark .card-enterprise:hover {
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: var(--shadow-enterprise-dark);
+        }
+        
+        .tech-pill {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(22, 163, 74, 0.1));
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+        
+        .tech-pill::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+        
+        .tech-pill:hover::before {
+            left: 100%;
+        }
+        
+        .tech-pill:hover {
+            transform: scale(1.1) rotateZ(3deg);
+            border-color: rgba(34, 197, 94, 0.5);
+            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.2);
+        }
+        
+        .progress-enterprise {
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .progress-fill-enterprise {
+            background: var(--gradient-primary);
+            transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            border-radius: 12px;
+        }
+        
+        .progress-fill-enterprise::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .hero-enterprise {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-enterprise::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-mesh);
+            opacity: 0.7;
+        }
+        
+        .hero-enterprise::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(34, 197, 94, 0.1) 50%, transparent 70%);
+            animation: gradientY 8s ease infinite;
+        }
+        
+        .floating-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(34, 197, 94, 0.6);
+            border-radius: 50%;
+            animation: particle 15s linear infinite;
+        }
+        
+        .matrix-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(90deg, rgba(34, 197, 94, 0.1) 1px, transparent 1px),
+                linear-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: matrix 20s linear infinite;
+            opacity: 0.3;
+        }
+        
+        .neural-network {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+        }
+        
+        .neural-line {
+            stroke: #22c55e;
+            stroke-width: 1;
+            fill: none;
+            animation: neuralNet 12s ease-in-out infinite;
+        }
+        
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: var(--gradient-primary);
+            z-index: 1000;
+            transition: width 0.1s ease-out;
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+        }
+        
+        .nav-enterprise {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .dark .nav-enterprise {
+            background: rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .nav-enterprise.scrolled {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        .dark .nav-enterprise.scrolled {
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo-enterprise {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        .section-enterprise {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-enterprise::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.5), transparent);
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-enterprise {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(20px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                transform: translateX(100%);
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .dark .mobile-menu-enterprise {
+                background: rgba(0, 0, 0, 0.3);
+                border: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            
+            .mobile-menu-enterprise.active {
+                transform: translateX(0);
+            }
+        }
+        
+        /* Code Animation */
+        .code-animation {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            line-height: 1.5;
+            color: rgba(34, 197, 94, 0.6);
+            position: absolute;
+            right: 5%;
+            top: 20%;
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            opacity: 0.3;
+        }
+        
+        .code-line {
+            white-space: nowrap;
+            animation: codeScroll 25s linear infinite;
+        }
+        
+        /* Enterprise Button Styles */
+        .btn-enterprise {
+            position: relative;
+            background: var(--gradient-primary);
+            border: none;
+            padding: 16px 32px;
+            border-radius: 16px;
+            font-weight: 600;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+        
+        .btn-enterprise::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+        
+        .btn-enterprise:hover::before {
+            left: 100%;
+        }
+        
+        .btn-enterprise:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.3);
+        }
+        
+        .btn-enterprise-outline {
+            background: transparent;
+            border: 2px solid;
+            border-image: var(--gradient-primary) 1;
+            color: #22c55e;
+        }
+        
+        .btn-enterprise-outline:hover {
+            background: var(--gradient-primary);
+            color: white;
         }
     </style>
 </head>
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-500 ease-in-out font-sans">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator"></div>
+    
+    <!-- Floating Particles -->
+    <div class="floating-particle" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="floating-particle" style="left: 20%; animation-delay: 2s;"></div>
+    <div class="floating-particle" style="left: 30%; animation-delay: 4s;"></div>
+    <div class="floating-particle" style="left: 40%; animation-delay: 6s;"></div>
+    <div class="floating-particle" style="left: 50%; animation-delay: 8s;"></div>
+    <div class="floating-particle" style="left: 60%; animation-delay: 10s;"></div>
+    <div class="floating-particle" style="left: 70%; animation-delay: 12s;"></div>
+    <div class="floating-particle" style="left: 80%; animation-delay: 14s;"></div>
+    <div class="floating-particle" style="left: 90%; animation-delay: 16s;"></div>
+    
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <h1 class="text-xl font-bold gradient-text">Portfolio</h1>
+    <nav class="nav-enterprise fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center text-white">
+                        <i class="fas fa-microchip text-xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold logo-enterprise">ë¯¼í˜•ì‹</h1>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">About</a>
-                    <a href="#experience" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Experience</a>
-                    <a href="#skills" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Skills</a>
-                    <a href="#education" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Education</a>
-                    <a href="#contact" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</a>
+                
+                <div class="hidden lg:flex items-center space-x-10">
+                    <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-all duration-300 font-medium text-lg relative group">
+                        About
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#experience" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-all duration-300 font-medium text-lg relative group">
+                        Experience
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-all duration-300 font-medium text-lg relative group">
+                        Skills
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#education" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-all duration-300 font-medium text-lg relative group">
+                        Education
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-all duration-300 font-medium text-lg relative group">
+                        Contact
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
                 </div>
-                <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                    <i class="fas fa-moon dark:hidden"></i>
-                    <i class="fas fa-sun hidden dark:block"></i>
-                </button>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-4 rounded-2xl bg-white/10 dark:bg-black/20 hover:bg-white/20 dark:hover:bg-black/30 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-white/20 dark:border-white/10">
+                        <i id="theme-icon" class="fas fa-moon text-gray-700 dark:text-gray-300 text-lg"></i>
+                    </button>
+                    
+                    <button id="mobile-menu-btn" class="lg:hidden p-4 rounded-2xl bg-white/10 dark:bg-black/20 hover:bg-white/20 dark:hover:bg-black/30 transition-all duration-300 backdrop-blur-sm border border-white/20 dark:border-white/10">
+                        <i class="fas fa-bars text-gray-700 dark:text-gray-300 text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu-enterprise lg:hidden fixed top-24 right-6 w-80 rounded-3xl shadow-2xl">
+            <div class="p-8 space-y-6">
+                <a href="#about" class="block py-4 px-6 text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-all duration-300 rounded-2xl hover:bg-white/10 dark:hover:bg-black/20">
+                    About
+                </a>
+                <a href="#experience" class="block py-4 px-6 text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-all duration-300 rounded-2xl hover:bg-white/10 dark:hover:bg-black/20">
+                    Experience
+                </a>
+                <a href="#skills" class="block py-4 px-6 text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-all duration-300 rounded-2xl hover:bg-white/10 dark:hover:bg-black/20">
+                    Skills
+                </a>
+                <a href="#education" class="block py-4 px-6 text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-all duration-300 rounded-2xl hover:bg-white/10 dark:hover:bg-black/20">
+                    Education
+                </a>
+                <a href="#contact" class="block py-4 px-6 text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-all duration-300 rounded-2xl hover:bg-white/10 dark:hover:bg-black/20">
+                    Contact
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-24 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="mb-8">
-                    <div class="w-32 h-32 mx-auto bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center text-white text-4xl font-bold">
-                        <i class="fas fa-microchip"></i>
+    <section class="hero-enterprise min-h-screen flex items-center justify-center relative overflow-hidden pt-24">
+        <!-- Matrix Background -->
+        <div class="matrix-bg opacity-20"></div>
+        
+        <!-- Neural Network SVG -->
+        <div class="neural-network opacity-30">
+            <svg width="100%" height="100%" viewBox="0 0 1200 800">
+                <path class="neural-line" d="M100,100 Q400,200 700,150 T1100,100"/>
+                <path class="neural-line" d="M150,300 Q450,400 750,350 T1150,300"/>
+                <path class="neural-line" d="M50,500 Q350,600 650,550 T1050,500"/>
+                <path class="neural-line" d="M200,700 Q500,600 800,650 T1200,700"/>
+            </svg>
+        </div>
+        
+        <!-- Code Animation -->
+        <div class="code-animation hidden xl:block opacity-40">
+            <div class="code-line">// Embedded Systems Engineer</div>
+            <div class="code-line">class EmbeddedEngineer {</div>
+            <div class="code-line">  constructor() {</div>
+            <div class="code-line">    this.name = "ë¯¼í˜•ì‹";</div>
+            <div class="code-line">    this.experience = 4;</div>
+            <div class="code-line">    this.skills = [</div>
+            <div class="code-line">      "C", "Python",</div>
+            <div class="code-line">      "Linux", "FreeRTOS",</div>
+            <div class="code-line">      "IoT", "TCP/IP",</div>
+            <div class="code-line">      "Azure", "AWS"</div>
+            <div class="code-line">    ];</div>
+            <div class="code-line">    this.passion = "Innovation";</div>
+            <div class="code-line">  }</div>
+            <div class="code-line">  </div>
+            <div class="code-line">  develop() {</div>
+            <div class="code-line">    return this.create</div>
+            <div class="code-line">      .innovative</div>
+            <div class="code-line">      .solutions();</div>
+            <div class="code-line">  }</div>
+            <div class="code-line">}</div>
+            <div class="code-line"></div>
+            <div class="code-line">const engineer = </div>
+            <div class="code-line">  new EmbeddedEngineer();</div>
+            <div class="code-line">engineer.develop();</div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-20">
+            <div class="text-center animate-fade-in">
+                <!-- Main Semiconductor Icon -->
+                <div class="mb-20 relative">
+                    <div class="w-56 h-56 mx-auto bg-gradient-to-br from-primary-400 via-primary-500 to-primary-700 rounded-[4rem] flex items-center justify-center text-white shadow-glow-lg animate-pulse-glow relative overflow-hidden border-4 border-white/20">
+                        <i class="fas fa-microchip text-8xl animate-tilt relative z-10"></i>
+                        <div class="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent opacity-60"></div>
+                        <!-- Circuit Lines -->
+                        <div class="absolute inset-4 border-2 border-white/30 rounded-[3rem]"></div>
+                        <div class="absolute inset-8 border border-white/20 rounded-[2rem]"></div>
+                    </div>
+                    <!-- Enhanced Floating Elements -->
+                    <div class="absolute -top-12 -left-12 w-24 h-24 bg-primary-400/40 rounded-full blur-xl animate-blob"></div>
+                    <div class="absolute -bottom-12 -right-12 w-36 h-36 bg-primary-600/40 rounded-full blur-xl animate-blob" style="animation-delay: 2s;"></div>
+                    <div class="absolute top-1/2 -left-20 w-20 h-20 bg-primary-500/40 rounded-full blur-xl animate-blob" style="animation-delay: 4s;"></div>
+                    <div class="absolute top-1/4 -right-16 w-16 h-16 bg-primary-300/40 rounded-full blur-xl animate-blob" style="animation-delay: 6s;"></div>
+                </div>
+                
+                <!-- Title with better spacing -->
+                <div class="mb-12">
+                    <h1 class="text-6xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight mb-6">
+                        <span class="gradient-text block font-display">EMBEDDED</span>
+                        <span class="gradient-text block font-display">SYSTEMS</span>
+                        <span class="text-white block font-display drop-shadow-2xl">ENGINEER</span>
+                    </h1>
+                </div>
+                
+                <!-- Name and Experience Badge -->
+                <div class="mb-12">
+                    <div class="gradient-border inline-block">
+                        <div class="bg-black/30 dark:bg-white/5 backdrop-blur-sm px-10 py-6 rounded-[24px]">
+                            <div class="flex items-center justify-center space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center">
+                                    <i class="fas fa-user text-white text-xl"></i>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-2xl lg:text-3xl font-bold text-white leading-tight">ë¯¼í˜•ì‹</p>
+                                    <p class="text-lg text-primary-300 font-medium">4ë…„ ê²½ë ¥ ì„ë² ë””ë“œ ì—”ì§€ë‹ˆì–´</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                    <span class="gradient-text">Embedded Systems</span><br>
-                    <span class="text-gray-900 dark:text-white">Engineer</span>
-                </h1>
-                <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-                    4³â°£ÀÇ ÀÓº£µğµå ½Ã½ºÅÛ °³¹ß °æÇèÀ» ¹ÙÅÁÀ¸·Î IoT, ³×Æ®¿öÅ©, Å¬¶ó¿ìµå ¿¬µ¿ ¼Ö·ç¼ÇÀ» °³¹ßÇÏ´Â ¿£Áö´Ï¾îÀÔ´Ï´Ù.
+                
+                <!-- Description -->
+                <p class="text-xl lg:text-2xl text-white/90 mb-16 max-w-5xl mx-auto leading-relaxed font-light">
+                    <span class="font-medium text-primary-300">IoT, ë„¤íŠ¸ì›Œí¬, í´ë¼ìš°ë“œ ì—°ë™ ì†”ë£¨ì…˜</span>ì„ ê°œë°œí•˜ëŠ” ì„ë² ë””ë“œ ì‹œìŠ¤í…œ ì—”ì§€ë‹ˆì–´ì…ë‹ˆë‹¤.<br>
+                    <span class="font-medium text-white">í˜ì‹ ì ì¸ ê¸°ìˆ ë¡œ ë” ë‚˜ì€ ë¯¸ë˜ë¥¼ ë§Œë“¤ì–´ê°‘ë‹ˆë‹¤.</span>
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#contact" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                        Contact Me
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
+                    <button class="btn-enterprise text-xl px-12 py-5 hover:shadow-glow-lg">
+                        <i class="fas fa-paper-plane mr-3"></i>
+                        ì—°ë½í•˜ê¸°
+                    </button>
+                    <button class="btn-enterprise btn-enterprise-outline text-xl px-12 py-5">
+                        <i class="fas fa-code mr-3"></i>
+                        í”„ë¡œì íŠ¸ ë³´ê¸°
+                    </button>
+                </div>
+                
+                <!-- Scroll Indicator -->
+                <div class="animate-bounce">
+                    <a href="#about" class="inline-block text-white/70 hover:text-white transition-all duration-300 hover:scale-110">
+                        <div class="w-8 h-12 border-2 border-white/50 rounded-full flex justify-center">
+                            <div class="w-1 h-3 bg-white/70 rounded-full mt-2 animate-bounce"></div>
+                        </div>
                     </a>
-                    <a href="#experience" class="border-2 border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                        View Experience
-                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Embedded System Themed Elements -->
+        <div class="absolute top-1/4 left-10 hidden lg:block">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-memory text-primary-400 text-2xl"></i>
+                    <div class="text-white">
+                        <p class="text-sm font-medium">ARM Cortex-M</p>
+                        <p class="text-xs text-gray-300">MCU Development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute top-1/3 right-10 hidden lg:block">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-wifi text-primary-400 text-2xl"></i>
+                    <div class="text-white">
+                        <p class="text-sm font-medium">IoT Connectivity</p>
+                        <p class="text-xs text-gray-300">Wireless Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-1/4 left-16 hidden lg:block">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-cloud text-primary-400 text-2xl"></i>
+                    <div class="text-white">
+                        <p class="text-sm font-medium">Cloud Integration</p>
+                        <p class="text-xs text-gray-300">Azure & AWS</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">About Me</h2>
-                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                    ÀÓº£µğµå ½Ã½ºÅÛ°ú IoT ±â¼ú¿¡ ¿­Á¤À» °¡Áø ¿£Áö´Ï¾î·Î, Çõ½ÅÀûÀÎ ¼Ö·ç¼Ç °³¹ß¿¡ Àü³äÇÏ°í ÀÖ½À´Ï´Ù.
+    <section id="about" class="section-enterprise py-32 bg-white dark:bg-gray-900 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-24 animate-slide-up">
+                <h2 class="text-6xl lg:text-7xl font-black mb-8 gradient-text font-display">ABOUT ME</h2>
+                <p class="text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
+                    ì„ë² ë””ë“œ ì‹œìŠ¤í…œê³¼ IoT ê¸°ìˆ ì— ì—´ì •ì„ ê°€ì§„ ì—”ì§€ë‹ˆì–´ë¡œ,<br>
+                    <span class="font-medium text-primary-600 dark:text-primary-400">ê¸€ë¡œë²Œ ìˆ˜ì¤€ì˜ í˜ì‹ ì ì¸ ì†”ë£¨ì…˜</span> ê°œë°œì— ì „ë…í•˜ê³  ìˆìŠµë‹ˆë‹¤.
                 </p>
             </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">Personal Information</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-calendar-alt text-primary-600 w-6"></i>
-                            <span class="ml-3">1992³â 09¿ù 08ÀÏ</span>
+            
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="space-y-12 animate-slide-up">
+                    <h3 class="text-4xl font-bold mb-12 text-gray-900 dark:text-white">Personal Information</h3>
+                    <div class="space-y-8">
+                        <div class="flex items-center group p-6 rounded-3xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300">
+                            <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center text-white mr-8 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                                <i class="fas fa-user text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg font-medium text-gray-500 dark:text-gray-400 mb-1">Name</p>
+                                <p class="text-2xl font-bold text-gray-900 dark:text-white">ë¯¼í˜•ì‹</p>
+                            </div>
                         </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-primary-600 w-6"></i>
-                            <span class="ml-3">¼­¿ï ±¤Áø±¸ ¿ë¸¶»ê·Î 16-1</span>
+                        <div class="flex items-center group p-6 rounded-3xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300">
+                            <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center text-white mr-8 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                                <i class="fas fa-calendar-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg font-medium text-gray-500 dark:text-gray-400 mb-1">Birth</p>
+                                <p class="text-2xl font-bold text-gray-900 dark:text-white">1992ë…„ 09ì›” 08ì¼</p>
+                            </div>
                         </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope text-primary-600 w-6"></i>
-                            <span class="ml-3">gudtlr56@naver.com</span>
+                        <div class="flex items-center group p-6 rounded-3xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300">
+                            <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center text-white mr-8 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                                <i class="fas fa-map-marker-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg font-medium text-gray-500 dark:text-gray-400 mb-1">Location</p>
+                                <p class="text-2xl font-bold text-gray-900 dark:text-white">ì„œìš¸ ê´‘ì§„êµ¬ ìš©ë§ˆì‚°ë¡œ 16-1</p>
+                            </div>
                         </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-briefcase text-primary-600 w-6"></i>
-                            <span class="ml-3">ÃÑ 4³â °æ·Â</span>
+                        <div class="flex items-center group p-6 rounded-3xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300">
+                            <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center text-white mr-8 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                                <i class="fas fa-envelope text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg font-medium text-gray-500 dark:text-gray-400 mb-1">Email</p>
+                                <p class="text-2xl font-bold text-gray-900 dark:text-white">gudtlr56@naver.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center group p-6 rounded-3xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300">
+                            <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center text-white mr-8 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                                <i class="fas fa-briefcase text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg font-medium text-gray-500 dark:text-gray-400 mb-1">Experience</p>
+                                <p class="text-2xl font-bold text-gray-900 dark:text-white">ì´ 4ë…„ ê²½ë ¥</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl">
-                    <h3 class="text-2xl font-bold mb-6">Core Competencies</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Embedded System °³¹ß (Linux, FreeRTOS, NON-OS)</span>
+                
+                <div class="card-enterprise p-12 rounded-[2rem] animate-slide-up shadow-enterprise dark:shadow-enterprise-dark" style="animation-delay: 0.2s;">
+                    <h3 class="text-4xl font-bold mb-12 text-gray-900 dark:text-white">Core Competencies</h3>
+                    <ul class="space-y-8">
+                        <li class="flex items-start group">
+                            <div class="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center mr-6 mt-2 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                                <i class="fas fa-check text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold text-gray-900 dark:text-white mb-2">Embedded System Development</p>
+                                <p class="text-lg text-gray-600 dark:text-gray-300">Linux, FreeRTOS, NON-OS í™˜ê²½ì—ì„œì˜ íŒì›¨ì–´ ê°œë°œ</p>
+                            </div>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>C, Python ±â¹İ Æß¿ş¾î °³¹ß</span>
+                        <li class="flex items-start group">
+                            <div class="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center mr-6 mt-2 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                                <i class="fas fa-check text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold text-gray-900 dark:text-white mb-2">Firmware Programming</p>
+                                <p class="text-lg text-gray-600 dark:text-gray-300">C, Python ê¸°ë°˜ ê³ ì„±ëŠ¥ íŒì›¨ì–´ ê°œë°œ</p>
+                            </div>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>ARM Cortex-M °è¿­ °³¹ß</span>
+                        <li class="flex items-start group">
+                            <div class="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center mr-6 mt-2 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                                <i class="fas fa-check text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold text-gray-900 dark:text-white mb-2">ARM Cortex-M Development</p>
+                                <p class="text-lg text-gray-600 dark:text-gray-300">ARM ì•„í‚¤í…ì²˜ ê¸°ë°˜ ì‹œìŠ¤í…œ ì„¤ê³„ ë° êµ¬í˜„</p>
+                            </div>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Network ÇÁ·ÎÅäÄİ °³¹ß ¹× ºĞ¼®</span>
+                        <li class="flex items-start group">
+                            <div class="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center mr-6 mt-2 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                                <i class="fas fa-check text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold text-gray-900 dark:text-white mb-2">Network Protocol Development</p>
+                                <p class="text-lg text-gray-600 dark:text-gray-300">TCP/IP, MQTT ë“± ë„¤íŠ¸ì›Œí¬ í”„ë¡œí† ì½œ êµ¬í˜„</p>
+                            </div>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>IoT Å¬¶ó¿ìµå ¿¬µ¿ (Azure, AWS)</span>
+                        <li class="flex items-start group">
+                            <div class="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center mr-6 mt-2 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                                <i class="fas fa-check text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold text-gray-900 dark:text-white mb-2">IoT Cloud Integration</p>
+                                <p class="text-lg text-gray-600 dark:text-gray-300">Azure, AWS í´ë¼ìš°ë“œ í”Œë«í¼ ì—°ë™ ì „ë¬¸</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -157,139 +837,236 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Experience</h2>
-                <p class="text-gray-600 dark:text-gray-300">WIZnet¿¡¼­ÀÇ 4³â°£ÀÇ ¿¬±¸°³¹ß °æÇè</p>
+    <section id="experience" class="section-enterprise py-32 bg-gray-50 dark:bg-gray-800/50 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-24 animate-slide-up">
+                <h2 class="text-6xl lg:text-7xl font-black mb-8 gradient-text font-display">EXPERIENCE</h2>
+                <p class="text-2xl text-gray-600 dark:text-gray-300 font-light">WIZnetì—ì„œì˜ 4ë…„ê°„ì˜ ì—°êµ¬ê°œë°œ ê²½í—˜</p>
             </div>
             
-            <div class="mb-12">
-                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                        <div>
-                            <h3 class="text-2xl font-bold text-primary-600">¿¬±¸¿ø (ÆÀ¿ø)</h3>
-                            <p class="text-xl font-semibold">WIZnet (À§Áî³×Æ®) - ±â¼ú¿¬±¸¼Ò</p>
+            <div class="mb-20 animate-slide-up">
+                <div class="card-enterprise rounded-[2rem] p-12 shadow-enterprise dark:shadow-enterprise-dark">
+                    <div class="flex flex-col xl:flex-row xl:items-center xl:justify-between mb-12">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center text-white mr-6 shadow-glow">
+                                    <i class="fas fa-building text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-4xl font-black text-primary-600 dark:text-primary-400 mb-2">ì—°êµ¬ì› (íŒ€ì›)</h3>
+                                    <p class="text-3xl font-bold text-gray-900 dark:text-white">WIZnet (ìœ„ì¦ˆë„¤íŠ¸)</p>
+                                </div>
+                            </div>
+                            <p class="text-xl text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                                ê¸°ìˆ ì—°êµ¬ì†Œ â€¢ Internet connectivityë¥¼ ìœ„í•œ Embedded network solution ì œê³µ
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <span class="tech-pill px-4 py-2 rounded-xl text-sm font-semibold">ë§¤ì¶œ ì•½200ì–µì›</span>
+                                <span class="tech-pill px-4 py-2 rounded-xl text-sm font-semibold">ì¢…ì—…ì›ìˆ˜ 30ëª…</span>
+                                <span class="tech-pill px-4 py-2 rounded-xl text-sm font-semibold">ê¸€ë¡œë²Œ ê¸°ì—…</span>
+                            </div>
                         </div>
-                        <div class="text-gray-600 dark:text-gray-300 mt-2 md:mt-0">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            2021.05 - 2025.05 (4³â)
+                        <div class="mt-8 xl:mt-0">
+                            <div class="gradient-border inline-block">
+                                <div class="bg-white dark:bg-gray-900 px-8 py-6 rounded-[22px]">
+                                    <div class="text-center">
+                                        <i class="fas fa-calendar-alt text-primary-500 text-2xl mb-2"></i>
+                                        <p class="text-2xl font-bold text-gray-900 dark:text-white">2021.05 - 2025.05</p>
+                                        <p class="text-lg text-primary-600 dark:text-primary-400 font-semibold">(4ë…„)</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6">
-                        Internet connectivity¸¦ À§ÇÑ Embedded network solutionÀ» Á¦°øÇÏ´Â ±â¾÷ (¸ÅÃâ: ¾à200¾ï¿ø, Á¾¾÷¿ø¼ö: 30¸í)
-                    </p>
                 </div>
             </div>
 
-            <div class="grid gap-8">
+            <div class="space-y-16">
                 <!-- Project 1 -->
-                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg card-hover">
-                    <h4 class="text-xl font-bold mb-4 text-primary-600">
-                        <i class="fas fa-network-wired mr-2"></i>
-                        Ethernet Chip TCP/IP Stack °ËÁõ
-                    </h4>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">
-                        ³×Æ®¿öÅ© ±â¹İ ½Å±Ô µğÀÚÀÎ Ethernet chip hardwired TCP/IP stack °ËÁõ ¹× ¼º´É Å×½ºÆ®
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tech-badge bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">C</span>
-                        <span class="tech-badge bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Python</span>
-                        <span class="tech-badge bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">TCP/IP</span>
-                        <span class="tech-badge bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">Ethernet</span>
+                <div class="card-enterprise rounded-[2rem] p-12 shadow-enterprise dark:shadow-enterprise-dark animate-slide-up">
+                    <div class="flex items-start mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-nvidia-500 to-nvidia-700 rounded-3xl flex items-center justify-center text-white mr-8 shadow-nvidia">
+                            <i class="fas fa-network-wired text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+                                Ethernet Chip TCP/IP Stack ê²€ì¦
+                            </h4>
+                            <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                                ë„¤íŠ¸ì›Œí¬ ê¸°ë°˜ ì‹ ê·œ ë””ìì¸ Ethernet chip hardwired TCP/IP stack ê²€ì¦ ë° ì„±ëŠ¥ í…ŒìŠ¤íŠ¸
+                            </p>
+                        </div>
                     </div>
-                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                        <li>? TCP/IP stack debugging ¹× °ËÁõ</li>
-                        <li>? Python aging test program ±¸Çö</li>
-                        <li>? ³×Æ®¿öÅ© ¼º´É Å×½ºÆ® ¼öÇà</li>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-blue-300 text-blue-700">C</span>
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-green-300 text-green-700">Python</span>
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-purple-300 text-purple-700">TCP/IP</span>
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-orange-300 text-orange-700">Ethernet</span>
+                    </div>
+                    <ul class="text-lg text-gray-700 dark:text-gray-300 space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>TCP/IP stack debugging ë° ê²€ì¦</strong> - ë„¤íŠ¸ì›Œí¬ í”„ë¡œí† ì½œ ì•ˆì •ì„± í™•ë³´</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>Python aging test program êµ¬í˜„</strong> - ì¥ê¸°ê°„ ì•ˆì •ì„± í…ŒìŠ¤íŠ¸ ìë™í™”</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>ë„¤íŠ¸ì›Œí¬ ì„±ëŠ¥ í…ŒìŠ¤íŠ¸ ìˆ˜í–‰</strong> - ìµœì í™”ëœ ì„±ëŠ¥ ì§€í‘œ ë‹¬ì„±</span>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg card-hover">
-                    <h4 class="text-xl font-bold mb-4 text-primary-600">
-                        <i class="fas fa-microchip mr-2"></i>
-                        J-Link SWD ÇÁ·ÎÅäÄİ ºĞ¼®
-                    </h4>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">
-                        J-Link Àåºñ¸¦ È°¿ëÇÑ SWD ÇÁ·ÎÅäÄİ ºĞ¼® ¹× ATE Àû¿ë °¡´ÉÇÑ º¤ÅÍ ÆÄÀÏ »ı¼º
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tech-badge bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-1 rounded-full text-sm">Linux</span>
-                        <span class="tech-badge bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Python</span>
-                        <span class="tech-badge bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">C/C++</span>
-                        <span class="tech-badge bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-3 py-1 rounded-full text-sm">ARM SWD</span>
+                <div class="card-enterprise rounded-[2rem] p-12 shadow-enterprise dark:shadow-enterprise-dark animate-slide-up" style="animation-delay: 0.1s;">
+                    <div class="flex items-start mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-aws-500 to-aws-700 rounded-3xl flex items-center justify-center text-white mr-8 shadow-aws">
+                            <i class="fas fa-microchip text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+                                J-Link SWD í”„ë¡œí† ì½œ ë¶„ì„
+                            </h4>
+                            <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                                J-Link ì¥ë¹„ë¥¼ í™œìš©í•œ SWD í”„ë¡œí† ì½œ ë¶„ì„ ë° ATE ì ìš© ê°€ëŠ¥í•œ ë²¡í„° íŒŒì¼ ìƒì„±
+                            </p>
+                        </div>
                     </div>
-                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                        <li>? ARM ±â¹İ SWD ÇÁ·ÎÅäÄİ ºĞ¼®</li>
-                        <li>? ATE Àû¿ë º¤ÅÍ °ËÁõ Å×½ºÆ® È¯°æ ±¸Ãà</li>
-                        <li>? Raspberry Pi 4¿¡¼­ ½Ã¹Ä·¹ÀÌ¼Ç ¼öÇà</li>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-red-300 text-red-700">Linux</span>
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-green-300 text-green-700">Python</span>
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-blue-300 text-blue-700">C/C++</span>
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-yellow-300 text-yellow-700">ARM SWD</span>
+                    </div>
+                    <ul class="text-lg text-gray-700 dark:text-gray-300 space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>ARM ê¸°ë°˜ SWD í”„ë¡œí† ì½œ ë¶„ì„</strong> - ë””ë²„ê¹… ì¸í„°í˜ì´ìŠ¤ ìµœì í™”</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>ATE ì ìš© ë²¡í„° ê²€ì¦ í…ŒìŠ¤íŠ¸ í™˜ê²½ êµ¬ì¶•</strong> - ìë™í™”ëœ í…ŒìŠ¤íŠ¸ ì‹œìŠ¤í…œ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>Raspberry Pi 4ì—ì„œ ì‹œë®¬ë ˆì´ì…˜ ìˆ˜í–‰</strong> - ì‹¤ì œ í™˜ê²½ ê²€ì¦</span>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg card-hover">
-                    <h4 class="text-xl font-bold mb-4 text-primary-600">
-                        <i class="fas fa-car mr-2"></i>
-                        SK Planet ARHIS ÇÁ·ÎÁ§Æ®
-                    </h4>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">
-                        À½Çâ ±â¹İ µµ·Î ³ë¸é °ËÁö ¼Ö·ç¼Ç - AI°¡ Â÷·® ÁÖÇà À½ÇâÀ» ºĞ¼®ÇÏ¿© ºí·¢¾ÆÀÌ½º µî µµ·Î »óÅÂ¸¦ ½Ç½Ã°£ Å½Áö
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tech-badge bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-1 rounded-full text-sm">Linux</span>
-                        <span class="tech-badge bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Python</span>
-                        <span class="tech-badge bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm">Shell Script</span>
-                        <span class="tech-badge bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 px-3 py-1 rounded-full text-sm">AI/ML</span>
+                <div class="card-enterprise rounded-[2rem] p-12 shadow-enterprise dark:shadow-enterprise-dark animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="flex items-start mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-nike-500 to-nike-700 rounded-3xl flex items-center justify-center text-white mr-8 shadow-nike">
+                            <i class="fas fa-car text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+                                SK Planet ARHIS í”„ë¡œì íŠ¸
+                            </h4>
+                            <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                                ìŒí–¥ ê¸°ë°˜ ë„ë¡œ ë…¸ë©´ ê²€ì§€ ì†”ë£¨ì…˜ - AIê°€ ì°¨ëŸ‰ ì£¼í–‰ ìŒí–¥ì„ ë¶„ì„í•˜ì—¬ ë¸”ë™ì•„ì´ìŠ¤ ë“± ë„ë¡œ ìƒíƒœë¥¼ ì‹¤ì‹œê°„ íƒì§€
+                            </p>
+                        </div>
                     </div>
-                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                        <li>? À½Çâ ½ÅÈ£ ÀüÃ³¸® ¹× ³ëÀÌÁî Á¦°Å ±â¼ú °³¹ß</li>
-                        <li>? µğ¹ÙÀÌ½º »ı»ê½Ã½ºÅÛ ¹× À¯Áöº¸¼ö ½Ã½ºÅÛ ±¸Ãà</li>
-                        <li>? ±¹³»¿Ü ÀüÃ¼ µğ¹ÙÀÌ½º °ü¸® ¹× ¿î¿ë</li>
-                        <li>? ¿î¿µ ½Ã½ºÅÛ ¿¬µ¿ ¹× ÈÄÃ³¸® ¾Ë°í¸®Áò Àû¿ë</li>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-red-300 text-red-700">Linux</span>
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-green-300 text-green-700">Python</span>
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-gray-300 text-gray-700">Shell Script</span>
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-indigo-300 text-indigo-700">AI/ML</span>
+                    </div>
+                    <ul class="text-lg text-gray-700 dark:text-gray-300 space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>ìŒí–¥ ì‹ í˜¸ ì „ì²˜ë¦¬ ë° ë…¸ì´ì¦ˆ ì œê±° ê¸°ìˆ  ê°œë°œ</strong> - ê³ ì •ë°€ ì‹ í˜¸ ì²˜ë¦¬</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>ë””ë°”ì´ìŠ¤ ìƒì‚°ì‹œìŠ¤í…œ ë° ìœ ì§€ë³´ìˆ˜ ì‹œìŠ¤í…œ êµ¬ì¶•</strong> - ì „ì²´ ë¼ì´í”„ì‚¬ì´í´ ê´€ë¦¬</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>êµ­ë‚´ì™¸ ì „ì²´ ë””ë°”ì´ìŠ¤ ê´€ë¦¬ ë° ìš´ìš©</strong> - ê¸€ë¡œë²Œ ìŠ¤ì¼€ì¼ ìš´ì˜</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>ìš´ì˜ ì‹œìŠ¤í…œ ì—°ë™ ë° í›„ì²˜ë¦¬ ì•Œê³ ë¦¬ì¦˜ ì ìš©</strong> - ì§€ëŠ¥í˜• ë°ì´í„° ë¶„ì„</span>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Project 4 -->
-                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg card-hover">
-                    <h4 class="text-xl font-bold mb-4 text-primary-600">
-                        <i class="fas fa-water mr-2"></i>
-                        ¾ç¾ç ½º¸¶Æ®Å¸¿îÃ§¸°Áö ÇÁ·ÎÁ§Æ®
-                    </h4>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">
-                        IoT ÃøÁ¤±â¸¦ ÅëÇÑ ³²´ëÃµ ¼öÁú, ¼öÀ§, »ıÅÂÈ¯°æ µ¥ÀÌÅÍ ¼öÁı¡¤ºĞ¼® ¹× À§Çè ¿¹Áö ¸ğµ¨ °³¹ß
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tech-badge bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-1 rounded-full text-sm">Linux Embedded</span>
-                        <span class="tech-badge bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Python</span>
-                        <span class="tech-badge bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">MQTT</span>
-                        <span class="tech-badge bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">SFTP</span>
+                <div class="card-enterprise rounded-[2rem] p-12 shadow-enterprise dark:shadow-enterprise-dark animate-slide-up" style="animation-delay: 0.3s;">
+                    <div class="flex items-start mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center text-white mr-8 shadow-glow">
+                            <i class="fas fa-water text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+                                ì–‘ì–‘ ìŠ¤ë§ˆíŠ¸íƒ€ìš´ì±Œë¦°ì§€ í”„ë¡œì íŠ¸
+                            </h4>
+                            <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                                IoT ì¸¡ì •ê¸°ë¥¼ í†µí•œ ë‚¨ëŒ€ì²œ ìˆ˜ì§ˆ, ìˆ˜ìœ„, ìƒíƒœí™˜ê²½ ë°ì´í„° ìˆ˜ì§‘Â·ë¶„ì„ ë° ìœ„í—˜ ì˜ˆì§€ ëª¨ë¸ ê°œë°œ
+                            </p>
+                        </div>
                     </div>
-                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                        <li>? ´ÙºĞ±¤ Ä«¸Ş¶ó ¼öÁú ÀÌ¹ÌÁö µ¥ÀÌÅÍ ¼öÁı ¹× ÀüÃ³¸®</li>
-                        <li>? ¾ç¾ç IoT ¼­¹ö ¿¬µ¿ ¹× ³ìÁ¶ »óÅÂ ¾÷µ¥ÀÌÆ®</li>
-                        <li>? MQTT, SFTP ³×Æ®¿öÅ© ÇÁ·ÎÅäÄİ È°¿ë</li>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-red-300 text-red-700">Linux Embedded</span>
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-green-300 text-green-700">Python</span>
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-purple-300 text-purple-700">MQTT</span>
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-orange-300 text-orange-700">SFTP</span>
+                    </div>
+                    <ul class="text-lg text-gray-700 dark:text-gray-300 space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>ë‹¤ë¶„ê´‘ ì¹´ë©”ë¼ ìˆ˜ì§ˆ ì´ë¯¸ì§€ ë°ì´í„° ìˆ˜ì§‘ ë° ì „ì²˜ë¦¬</strong> - ê³ ê¸‰ ì„¼ì„œ ë°ì´í„° ì²˜ë¦¬</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>ì–‘ì–‘ IoT ì„œë²„ ì—°ë™ ë° ë…¹ì¡° ìƒíƒœ ì—…ë°ì´íŠ¸</strong> - ì‹¤ì‹œê°„ í™˜ê²½ ëª¨ë‹ˆí„°ë§</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>MQTT, SFTP ë„¤íŠ¸ì›Œí¬ í”„ë¡œí† ì½œ í™œìš©</strong> - ì•ˆì •ì ì¸ ë°ì´í„° ì „ì†¡</span>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Project 5 -->
-                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg card-hover">
-                    <h4 class="text-xl font-bold mb-4 text-primary-600">
-                        <i class="fas fa-cloud mr-2"></i>
-                        Raspberry Pi Pico IoT Cloud ¿¬µ¿
-                    </h4>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">
-                        Raspberry Pi Pico ±â¹İ Ethernet ¹× Wi-Fi Á¦Ç°ÀÇ Å¬¶ó¿ìµå ¼­ºñ½º ¿¬µ¿
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tech-badge bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">Azure IoT Hub</span>
-                        <span class="tech-badge bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">AWS IoT Core</span>
-                        <span class="tech-badge bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Raspberry Pi Pico</span>
+                <div class="card-enterprise rounded-[2rem] p-12 shadow-enterprise dark:shadow-enterprise-dark animate-slide-up" style="animation-delay: 0.4s;">
+                    <div class="flex items-start mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center text-white mr-8 shadow-glow">
+                            <i class="fas fa-cloud text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+                                Raspberry Pi Pico IoT Cloud ì—°ë™
+                            </h4>
+                            <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Raspberry Pi Pico ê¸°ë°˜ Ethernet ë° Wi-Fi ì œí’ˆì˜ í´ë¼ìš°ë“œ ì„œë¹„ìŠ¤ ì—°ë™
+                            </p>
+                        </div>
                     </div>
-                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                        <li>? Azure µğ¹ÙÀÌ½º ¿¬°á ¼­ºñ½º ±âÈ¹</li>
-                        <li>? AWS µğ¹ÙÀÌ½º ¿¬°á ¼­ºñ½º ±âÈ¹</li>
-                        <li>? Å¬¶ó¿ìµå ÀÎÁõ ¹× ¿¬µ¿ ±¸Çö</li>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-blue-300 text-blue-700">Azure IoT Hub</span>
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-orange-300 text-orange-700">AWS IoT Core</span>
+                        <span class="tech-pill px-6 py-3 rounded-2xl font-bold border-green-300 text-green-700">Raspberry Pi Pico</span>
+                    </div>
+                    <ul class="text-lg text-gray-700 dark:text-gray-300 space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>Azure ë””ë°”ì´ìŠ¤ ì—°ê²° ì„œë¹„ìŠ¤ ê¸°íš</strong> - ì—”í„°í”„ë¼ì´ì¦ˆê¸‰ í´ë¼ìš°ë“œ ì•„í‚¤í…ì²˜</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>AWS ë””ë°”ì´ìŠ¤ ì—°ê²° ì„œë¹„ìŠ¤ ê¸°íš</strong> - í™•ì¥ì„± ìˆëŠ” IoT í”Œë«í¼ ì„¤ê³„</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>í´ë¼ìš°ë“œ ì¸ì¦ ë° ì—°ë™ êµ¬í˜„</strong> - ë³´ì•ˆì„±ê³¼ ì•ˆì •ì„± í™•ë³´</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -297,110 +1074,131 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Technical Skills</h2>
-                <p class="text-gray-600 dark:text-gray-300">Àü¹® ±â¼ú ¹× µµ±¸</p>
+    <section id="skills" class="section-enterprise py-32 bg-white dark:bg-gray-900 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-24 animate-slide-up">
+                <h2 class="text-6xl lg:text-7xl font-black mb-8 gradient-text font-display">TECHNICAL SKILLS</h2>
+                <p class="text-2xl text-gray-600 dark:text-gray-300 font-light">ê¸€ë¡œë²Œ ìˆ˜ì¤€ì˜ ì „ë¬¸ ê¸°ìˆ  ë° ë„êµ¬</p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid lg:grid-cols-3 gap-12">
                 <!-- Programming Languages -->
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg card-hover">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-code text-4xl text-primary-600 mb-4"></i>
-                        <h3 class="text-xl font-bold">Programming Languages</h3>
+                <div class="card-enterprise rounded-[2rem] p-10 shadow-enterprise dark:shadow-enterprise-dark animate-slide-up">
+                    <div class="text-center mb-12">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-700 rounded-[2rem] flex items-center justify-center text-white text-4xl mb-8 mx-auto shadow-glow animate-float">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Programming Languages</h3>
                     </div>
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center">
-                            <span>C</span>
-                            <div class="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                <div class="bg-primary-600 h-2 rounded-full" style="width: 95%"></div>
+                    <div class="space-y-8">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xl font-bold text-gray-700 dark:text-gray-300">C</span>
+                                <span class="text-2xl font-black text-primary-600">95%</span>
+                            </div>
+                            <div class="progress-enterprise h-4 rounded-xl">
+                                <div class="progress-fill-enterprise h-4 rounded-xl" style="width: 0%;" data-width="95%"></div>
                             </div>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <span>Python</span>
-                            <div class="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                <div class="bg-primary-600 h-2 rounded-full" style="width: 90%"></div>
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xl font-bold text-gray-700 dark:text-gray-300">Python</span>
+                                <span class="text-2xl font-black text-primary-600">90%</span>
+                            </div>
+                            <div class="progress-enterprise h-4 rounded-xl">
+                                <div class="progress-fill-enterprise h-4 rounded-xl" style="width: 0%;" data-width="90%"></div>
                             </div>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <span>Shell Script</span>
-                            <div class="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                <div class="bg-primary-600 h-2 rounded-full" style="width: 85%"></div>
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xl font-bold text-gray-700 dark:text-gray-300">Shell Script</span>
+                                <span class="text-2xl font-black text-primary-600">85%</span>
+                            </div>
+                            <div class="progress-enterprise h-4 rounded-xl">
+                                <div class="progress-fill-enterprise h-4 rounded-xl" style="width: 0%;" data-width="85%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Operating Systems -->
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg card-hover">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-desktop text-4xl text-primary-600 mb-4"></i>
-                        <h3 class="text-xl font-bold">Operating Systems</h3>
+                <div class="card-enterprise rounded-[2rem] p-10 shadow-enterprise dark:shadow-enterprise-dark animate-slide-up" style="animation-delay: 0.1s;">
+                    <div class="text-center mb-12">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-700 rounded-[2rem] flex items-center justify-center text-white text-4xl mb-8 mx-auto shadow-glow animate-float" style="animation-delay: -2s;">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Operating Systems</h3>
                     </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-1 rounded-full text-sm">Linux</span>
-                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">FreeRTOS</span>
-                        <span class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm">NON-OS</span>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-red-300 text-red-700">Linux</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-blue-300 text-blue-700">FreeRTOS</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-gray-300 text-gray-700">NON-OS</span>
                     </div>
                 </div>
 
                 <!-- Network & Communication -->
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg card-hover">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-network-wired text-4xl text-primary-600 mb-4"></i>
-                        <h3 class="text-xl font-bold">Network & Communication</h3>
+                <div class="card-enterprise rounded-[2rem] p-10 shadow-enterprise dark:shadow-enterprise-dark animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="text-center mb-12">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-700 rounded-[2rem] flex items-center justify-center text-white text-4xl mb-8 mx-auto shadow-glow animate-float" style="animation-delay: -4s;">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Network & Communication</h3>
                     </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">TCP/IP</span>
-                        <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">MQTT</span>
-                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">HTTP</span>
-                        <span class="bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-1 rounded-full text-sm">SSL/TLS</span>
-                        <span class="bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">Ethernet</span>
-                        <span class="bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 px-3 py-1 rounded-full text-sm">Wi-Fi</span>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-purple-300 text-purple-700">TCP/IP</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-green-300 text-green-700">MQTT</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-blue-300 text-blue-700">HTTP</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-red-300 text-red-700">SSL/TLS</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-orange-300 text-orange-700">Ethernet</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-indigo-300 text-indigo-700">Wi-Fi</span>
                     </div>
                 </div>
 
                 <!-- Cloud Platforms -->
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg card-hover">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-cloud text-4xl text-primary-600 mb-4"></i>
-                        <h3 class="text-xl font-bold">Cloud Platforms</h3>
+                <div class="card-enterprise rounded-[2rem] p-10 shadow-enterprise dark:shadow-enterprise-dark animate-slide-up" style="animation-delay: 0.3s;">
+                    <div class="text-center mb-12">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-700 rounded-[2rem] flex items-center justify-center text-white text-4xl mb-8 mx-auto shadow-glow animate-float" style="animation-delay: -1s;">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Cloud Platforms</h3>
                     </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">Microsoft Azure</span>
-                        <span class="bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">AWS</span>
-                        <span class="bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 px-3 py-1 rounded-full text-sm">IoT Hub</span>
-                        <span class="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-3 py-1 rounded-full text-sm">IoT Core</span>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-blue-300 text-blue-700">Microsoft Azure</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-orange-300 text-orange-700">AWS</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-cyan-300 text-cyan-700">IoT Hub</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-yellow-300 text-yellow-700">IoT Core</span>
                     </div>
                 </div>
 
                 <!-- Development Tools -->
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg card-hover">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-tools text-4xl text-primary-600 mb-4"></i>
-                        <h3 class="text-xl font-bold">Development Tools</h3>
+                <div class="card-enterprise rounded-[2rem] p-10 shadow-enterprise dark:shadow-enterprise-dark animate-slide-up" style="animation-delay: 0.4s;">
+                    <div class="text-center mb-12">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-700 rounded-[2rem] flex items-center justify-center text-white text-4xl mb-8 mx-auto shadow-glow animate-float" style="animation-delay: -3s;">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Development Tools</h3>
                     </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm">Git/GitHub</span>
-                        <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">CMake</span>
-                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">STM32CubeIDE</span>
-                        <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">VS Code</span>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-gray-300 text-gray-700">Git/GitHub</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-green-300 text-green-700">CMake</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-blue-300 text-blue-700">STM32CubeIDE</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-purple-300 text-purple-700">VS Code</span>
                     </div>
                 </div>
 
                 <!-- Hardware & Debug Tools -->
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg card-hover">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-microchip text-4xl text-primary-600 mb-4"></i>
-                        <h3 class="text-xl font-bold">Hardware & Debug</h3>
+                <div class="card-enterprise rounded-[2rem] p-10 shadow-enterprise dark:shadow-enterprise-dark animate-slide-up" style="animation-delay: 0.5s;">
+                    <div class="text-center mb-12">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-700 rounded-[2rem] flex items-center justify-center text-white text-4xl mb-8 mx-auto shadow-glow animate-float" style="animation-delay: -5s;">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Hardware & Debug</h3>
                     </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-1 rounded-full text-sm">ARM Cortex-M</span>
-                        <span class="bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">J-Link</span>
-                        <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Logic Pro</span>
-                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">Wireshark</span>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-red-300 text-red-700">ARM Cortex-M</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-orange-300 text-orange-700">J-Link</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-green-300 text-green-700">Logic Pro</span>
+                        <span class="tech-pill px-6 py-4 rounded-2xl font-bold text-lg border-blue-300 text-blue-700">Wireshark</span>
                     </div>
                 </div>
             </div>
@@ -408,55 +1206,87 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Education</h2>
-                <p class="text-gray-600 dark:text-gray-300">Àü¹® ±³À° °úÁ¤</p>
+    <section id="education" class="section-enterprise py-32 bg-gray-50 dark:bg-gray-800/50 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-24 animate-slide-up">
+                <h2 class="text-6xl lg:text-7xl font-black mb-8 gradient-text font-display">EDUCATION</h2>
+                <p class="text-2xl text-gray-600 dark:text-gray-300 font-light">ì „ë¬¸ êµìœ¡ ê³¼ì •</p>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg card-hover">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center text-white mr-4">
-                            <i class="fas fa-microchip"></i>
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="card-enterprise rounded-[2rem] p-12 shadow-enterprise dark:shadow-enterprise-dark animate-slide-up">
+                    <div class="flex items-center mb-12">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center text-white mr-8 shadow-glow">
+                            <i class="fas fa-microchip text-2xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold">ÀÓº£µğµå ½Ã½ºÅÛ</h3>
-                            <p class="text-gray-600 dark:text-gray-300">ÇÑÄÄ MDS¾ÆÄ«µ¥¹Ì</p>
+                            <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">ì„ë² ë””ë“œ ì‹œìŠ¤í…œ</h3>
+                            <p class="text-xl text-gray-600 dark:text-gray-300">í•œì»´ MDSì•„ì¹´ë°ë¯¸</p>
                         </div>
                     </div>
-                    <div class="mb-4">
-                        <span class="text-sm text-gray-500 dark:text-gray-400">2020.07 - 2020.12</span>
-                        <span class="ml-4 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-2 py-1 rounded text-sm">760½Ã°£</span>
+                    <div class="mb-8 flex flex-wrap items-center gap-6">
+                        <span class="text-lg text-gray-500 dark:text-gray-400 font-medium">2020.07 - 2020.12</span>
+                        <div class="gradient-border inline-block">
+                            <div class="bg-white dark:bg-gray-900 px-6 py-3 rounded-[18px]">
+                                <span class="text-xl font-black text-primary-600 dark:text-primary-400">760ì‹œê°„</span>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
-                        <li>? ÀÓº£µğµå C ÇÁ·Î±×·¡¹Ö</li>
-                        <li>? ÀÓº£µğµå ½Ã½ºÅÛ ÀÌÇØ¿Í È°¿ë</li>
-                        <li>? ¸®´ª½º Ä¿³Î Æ÷ÆÃ°ú µğ¹ÙÀÌ½º µå¶óÀÌ¹ö Á¦¾î</li>
-                        <li>? IoT ³×Æ®¿öÅ© ÇÁ·Î±×·¡¹Ö</li>
+                    <ul class="text-lg text-gray-700 dark:text-gray-300 space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>ì„ë² ë””ë“œ C í”„ë¡œê·¸ë˜ë°</strong> - í•˜ë“œì›¨ì–´ ì œì–´ ë° ìµœì í™”</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>ì„ë² ë””ë“œ ì‹œìŠ¤í…œ ì´í•´ì™€ í™œìš©</strong> - ì‹œìŠ¤í…œ ì•„í‚¤í…ì²˜ ì„¤ê³„</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>ë¦¬ëˆ…ìŠ¤ ì»¤ë„ í¬íŒ…ê³¼ ë””ë°”ì´ìŠ¤ ë“œë¼ì´ë²„ ì œì–´</strong> - ì €ìˆ˜ì¤€ ì‹œìŠ¤í…œ í”„ë¡œê·¸ë˜ë°</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>IoT ë„¤íŠ¸ì›Œí¬ í”„ë¡œê·¸ë˜ë°</strong> - ì—°ê²°ì„±ê³¼ í†µì‹  í”„ë¡œí† ì½œ</span>
+                        </li>
                     </ul>
                 </div>
 
-                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg card-hover">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center text-white mr-4">
-                            <i class="fas fa-robot"></i>
+                <div class="card-enterprise rounded-[2rem] p-12 shadow-enterprise dark:shadow-enterprise-dark animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-12">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center text-white mr-8 shadow-glow">
+                            <i class="fas fa-robot text-2xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold">Linux/ROS ±â¹İ IoT/AI</h3>
-                            <p class="text-gray-600 dark:text-gray-300">ÇÑÄÄ ¾ÆÄ«µ¥¹Ì</p>
+                            <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">Linux/ROS ê¸°ë°˜ IoT/AI</h3>
+                            <p class="text-xl text-gray-600 dark:text-gray-300">í•œì»´ ì•„ì¹´ë°ë¯¸</p>
                         </div>
                     </div>
-                    <div class="mb-4">
-                        <span class="text-sm text-gray-500 dark:text-gray-400">2020.12 - 2021.04</span>
-                        <span class="ml-4 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-2 py-1 rounded text-sm">756½Ã°£</span>
+                    <div class="mb-8 flex flex-wrap items-center gap-6">
+                        <span class="text-lg text-gray-500 dark:text-gray-400 font-medium">2020.12 - 2021.04</span>
+                        <div class="gradient-border inline-block">
+                            <div class="bg-white dark:bg-gray-900 px-6 py-3 rounded-[18px]">
+                                <span class="text-xl font-black text-primary-600 dark:text-primary-400">756ì‹œê°„</span>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
-                        <li>? Linux ½Ã½ºÅÛ ÇÁ·Î±×·¡¹Ö</li>
-                        <li>? ROS (Robot Operating System)</li>
-                        <li>? IoT ½Ã½ºÅÛ °³¹ß</li>
-                        <li>? ±âÃÊÀûÀÎ ¸Ó½Å·¯´×/µö·¯´×</li>
+                    <ul class="text-lg text-gray-700 dark:text-gray-300 space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>Linux ì‹œìŠ¤í…œ í”„ë¡œê·¸ë˜ë°</strong> - ë©€í‹°í”„ë¡œì„¸ì‹± ë° ë„¤íŠ¸ì›Œí¬</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>ROS (Robot Operating System)</strong> - ë¡œë´‡ ì œì–´ ë° ì„¼ì„œ ìœµí•©</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>IoT ì‹œìŠ¤í…œ ê°œë°œ</strong> - ìŠ¤ë§ˆíŠ¸ ë””ë°”ì´ìŠ¤ ì—°ë™</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-primary-500 mt-1 mr-4 text-xl"></i>
+                            <span><strong>ê¸°ì´ˆì ì¸ ë¨¸ì‹ ëŸ¬ë‹/ë”¥ëŸ¬ë‹</strong> - ì§€ëŠ¥í˜• ì‹œìŠ¤í…œ êµ¬í˜„</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -464,68 +1294,77 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
-                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                    »õ·Î¿î ±âÈ¸³ª Çù¾÷¿¡ °ü½ÉÀÌ ÀÖÀ¸½Ã¸é ¾ğÁ¦µç ¿¬¶ôÇØ ÁÖ¼¼¿ä.
+    <section id="contact" class="section-enterprise py-32 bg-white dark:bg-gray-900 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-24 animate-slide-up">
+                <h2 class="text-6xl lg:text-7xl font-black mb-8 gradient-text font-display">GET IN TOUCH</h2>
+                <p class="text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
+                    ìƒˆë¡œìš´ ê¸°íšŒë‚˜ í˜‘ì—…ì— ê´€ì‹¬ì´ ìˆìœ¼ì‹œë©´ ì–¸ì œë“  ì—°ë½í•´ ì£¼ì„¸ìš”.<br>
+                    <span class="font-medium text-primary-600 dark:text-primary-400">í•¨ê»˜ í˜ì‹ ì ì¸ ì„ë² ë””ë“œ ì†”ë£¨ì…˜ì„ ë§Œë“¤ì–´ê°‘ì‹œë‹¤.</span>
                 </p>
             </div>
             
-            <div class="max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-12">
-                    <div>
-                        <h3 class="text-2xl font-bold mb-8">Contact Information</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center text-white mr-4">
-                                    <i class="fas fa-envelope"></i>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-20">
+                    <div class="animate-slide-up">
+                        <h3 class="text-4xl font-bold mb-16 text-gray-900 dark:text-white">Contact Information</h3>
+                        <div class="space-y-12">
+                            <div class="flex items-center group p-8 rounded-3xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300">
+                                <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-[2rem] flex items-center justify-center text-white mr-8 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                                    <i class="fas fa-envelope text-2xl"></i>
                                 </div>
                                 <div>
-                                    <p class="font-semibold">Email</p>
-                                    <p class="text-gray-600 dark:text-gray-300">gudtlr56@naver.com</p>
+                                    <p class="font-black text-2xl text-gray-900 dark:text-white mb-2">Email</p>
+                                    <p class="text-xl text-gray-600 dark:text-gray-300">gudtlr56@naver.com</p>
                                 </div>
                             </div>
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center text-white mr-4">
-                                    <i class="fas fa-map-marker-alt"></i>
+                            <div class="flex items-center group p-8 rounded-3xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300">
+                                <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-[2rem] flex items-center justify-center text-white mr-8 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                                    <i class="fas fa-map-marker-alt text-2xl"></i>
                                 </div>
                                 <div>
-                                    <p class="font-semibold">Location</p>
-                                    <p class="text-gray-600 dark:text-gray-300">¼­¿ï ±¤Áø±¸ ¿ë¸¶»ê·Î 16-1</p>
+                                    <p class="font-black text-2xl text-gray-900 dark:text-white mb-2">Location</p>
+                                    <p class="text-xl text-gray-600 dark:text-gray-300">ì„œìš¸ ê´‘ì§„êµ¬ ìš©ë§ˆì‚°ë¡œ 16-1</p>
                                 </div>
                             </div>
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center text-white mr-4">
-                                    <i class="fas fa-briefcase"></i>
+                            <div class="flex items-center group p-8 rounded-3xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300">
+                                <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-[2rem] flex items-center justify-center text-white mr-8 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                                    <i class="fas fa-briefcase text-2xl"></i>
                                 </div>
                                 <div>
-                                    <p class="font-semibold">Experience</p>
-                                    <p class="text-gray-600 dark:text-gray-300">4³â ÀÓº£µğµå ½Ã½ºÅÛ °³¹ß</p>
+                                    <p class="font-black text-2xl text-gray-900 dark:text-white mb-2">Experience</p>
+                                    <p class="text-xl text-gray-600 dark:text-gray-300">4ë…„ ì„ë² ë””ë“œ ì‹œìŠ¤í…œ ê°œë°œ</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8">
-                        <h3 class="text-2xl font-bold mb-6">Areas of Expertise</h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="text-center p-4 bg-white dark:bg-gray-900 rounded-lg">
-                                <i class="fas fa-microchip text-2xl text-primary-600 mb-2"></i>
-                                <p class="font-semibold text-sm">Embedded Systems</p>
+                    <div class="card-enterprise rounded-[2rem] p-12 animate-slide-up shadow-enterprise dark:shadow-enterprise-dark" style="animation-delay: 0.2s;">
+                        <h3 class="text-4xl font-bold mb-12 text-gray-900 dark:text-white">Areas of Expertise</h3>
+                        <div class="grid grid-cols-2 gap-8">
+                            <div class="text-center p-8 bg-white/50 dark:bg-gray-900/50 rounded-3xl card-enterprise">
+                                <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center text-white text-3xl mb-6 mx-auto shadow-glow">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <p class="font-bold text-xl text-gray-900 dark:text-white">Embedded Systems</p>
                             </div>
-                            <div class="text-center p-4 bg-white dark:bg-gray-900 rounded-lg">
-                                <i class="fas fa-network-wired text-2xl text-primary-600 mb-2"></i>
-                                <p class="font-semibold text-sm">Network Programming</p>
+                            <div class="text-center p-8 bg-white/50 dark:bg-gray-900/50 rounded-3xl card-enterprise">
+                                <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center text-white text-3xl mb-6 mx-auto shadow-glow">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <p class="font-bold text-xl text-gray-900 dark:text-white">Network Programming</p>
                             </div>
-                            <div class="text-center p-4 bg-white dark:bg-gray-900 rounded-lg">
-                                <i class="fas fa-cloud text-2xl text-primary-600 mb-2"></i>
-                                <p class="font-semibold text-sm">IoT Cloud Integration</p>
+                            <div class="text-center p-8 bg-white/50 dark:bg-gray-900/50 rounded-3xl card-enterprise">
+                                <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center text-white text-3xl mb-6 mx-auto shadow-glow">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <p class="font-bold text-xl text-gray-900 dark:text-white">IoT Cloud Integration</p>
                             </div>
-                            <div class="text-center p-4 bg-white dark:bg-gray-900 rounded-lg">
-                                <i class="fas fa-cogs text-2xl text-primary-600 mb-2"></i>
-                                <p class="font-semibold text-sm">Firmware Development</p>
+                            <div class="text-center p-8 bg-white/50 dark:bg-gray-900/50 rounded-3xl card-enterprise">
+                                <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center text-white text-3xl mb-6 mx-auto shadow-glow">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <p class="font-bold text-xl text-gray-900 dark:text-white">Firmware Development</p>
                             </div>
                         </div>
                     </div>
@@ -535,24 +1374,41 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer class="bg-gray-900 text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-900/20 via-primary-700/20 to-primary-900/20"></div>
+        <div class="matrix-bg opacity-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div class="text-center">
-                <h3 class="text-2xl font-bold mb-4 gradient-text">Embedded Systems Engineer</h3>
-                <p class="text-gray-400 mb-6">Çõ½ÅÀûÀÎ ÀÓº£µğµå ¼Ö·ç¼ÇÀ¸·Î ´õ ³ªÀº ¹Ì·¡¸¦ ¸¸µé¾î°©´Ï´Ù.</p>
-                <div class="flex justify-center space-x-6">
-                    <a href="mailto:gudtlr56@naver.com" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fas fa-envelope text-xl"></i>
+                <div class="flex items-center justify-center mb-8">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center text-white text-3xl mr-6 shadow-glow">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="text-4xl font-black logo-enterprise">ë¯¼í˜•ì‹</h3>
+                </div>
+                <p class="text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    í˜ì‹ ì ì¸ ì„ë² ë””ë“œ ì†”ë£¨ì…˜ìœ¼ë¡œ ë” ë‚˜ì€ ë¯¸ë˜ë¥¼ ë§Œë“¤ì–´ê°‘ë‹ˆë‹¤.<br>
+                    <span class="font-semibold text-primary-400">ê¸€ë¡œë²Œ ìˆ˜ì¤€ì˜ ê¸°ìˆ ë ¥ìœ¼ë¡œ ì„¸ìƒì„ ë³€í™”ì‹œí‚µë‹ˆë‹¤.</span>
+                </p>
+                <div class="flex justify-center space-x-8 mb-16">
+                    <a href="mailto:gudtlr56@naver.com" class="group">
+                        <div class="w-16 h-16 bg-gray-800 hover:bg-gradient-to-br hover:from-primary-500 hover:to-primary-700 rounded-3xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-glow">
+                            <i class="fas fa-envelope text-2xl text-gray-300 group-hover:text-white"></i>
+                        </div>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-github text-xl"></i>
+                    <a href="#" class="group">
+                        <div class="w-16 h-16 bg-gray-800 hover:bg-gradient-to-br hover:from-primary-500 hover:to-primary-700 rounded-3xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-glow">
+                            <i class="fab fa-github text-2xl text-gray-300 group-hover:text-white"></i>
+                        </div>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-linkedin text-xl"></i>
+                    <a href="#" class="group">
+                        <div class="w-16 h-16 bg-gray-800 hover:bg-gradient-to-br hover:from-primary-500 hover:to-primary-700 rounded-3xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-glow">
+                            <i class="fab fa-linkedin text-2xl text-gray-300 group-hover:text-white"></i>
+                        </div>
                     </a>
                 </div>
-                <div class="mt-8 pt-8 border-t border-gray-800 text-gray-400 text-sm">
-                    <p>&copy; 2025 Embedded Systems Engineer Portfolio. All rights reserved.</p>
+                <div class="pt-8 border-t border-gray-800 text-gray-400 text-lg">
+                    <p>&copy; 2025 ë¯¼í˜•ì‹ - Embedded Systems Engineer Portfolio. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -561,16 +1417,66 @@
     <script>
         // Theme toggle functionality
         const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
         const html = document.documentElement;
 
         // Check for saved theme preference or default to light mode
         const currentTheme = localStorage.getItem('theme') || 'light';
-        html.classList.toggle('dark', currentTheme === 'dark');
+        if (currentTheme === 'dark') {
+            html.classList.add('dark');
+            themeIcon.className = 'fas fa-sun text-gray-700 dark:text-gray-300 text-lg';
+        }
 
         themeToggle.addEventListener('click', () => {
             html.classList.toggle('dark');
-            const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
-            localStorage.setItem('theme', newTheme);
+            const isDark = html.classList.contains('dark');
+            
+            // Update icon with smooth transition
+            themeIcon.style.transform = 'scale(0)';
+            setTimeout(() => {
+                themeIcon.className = isDark 
+                    ? 'fas fa-sun text-gray-700 dark:text-gray-300 text-lg'
+                    : 'fas fa-moon text-gray-700 dark:text-gray-300 text-lg';
+                themeIcon.style.transform = 'scale(1)';
+            }, 150);
+            
+            // Save preference
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const isActive = mobileMenu.classList.contains('active');
+            
+            // Animate button icon
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.style.transform = 'rotate(90deg)';
+            setTimeout(() => {
+                icon.className = isActive ? 'fas fa-times text-gray-700 dark:text-gray-300 text-lg' : 'fas fa-bars text-gray-700 dark:text-gray-300 text-lg';
+                icon.style.transform = 'rotate(0deg)';
+            }, 150);
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.className = 'fas fa-bars text-gray-700 dark:text-gray-300 text-lg';
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.className = 'fas fa-bars text-gray-700 dark:text-gray-300 text-lg';
+            }
         });
 
         // Smooth scrolling for navigation links
@@ -587,37 +1493,163 @@
             });
         });
 
-        // Add scroll effect to navigation
+        // Scroll progress indicator and navigation effects
         window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.classList.add('shadow-lg');
+            const scrollProgress = document.querySelector('.scroll-indicator');
+            const nav = document.querySelector('.nav-enterprise');
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            
+            scrollProgress.style.width = scrollPercent + '%';
+            
+            // Navigation background effect with enhanced blur
+            if (scrollTop > 100) {
+                nav.classList.add('scrolled');
             } else {
-                nav.classList.remove('shadow-lg');
+                nav.classList.remove('scrolled');
             }
         });
 
-        // Intersection Observer for animations
+        // Enhanced Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            rootMargin: '0px 0px -100px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
                 }
             });
         }, observerOptions);
 
-        // Observe all cards for animation
-        document.querySelectorAll('.card-hover').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
+        // Observe elements for animation
+        document.querySelectorAll('.animate-slide-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(60px) scale(0.95)';
+            el.style.transition = 'opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(el);
+        });
+
+        // Enhanced progress bar animation
+        const progressObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.progress-fill-enterprise');
+                    progressBars.forEach((bar, index) => {
+                        const width = bar.getAttribute('data-width');
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 500 + (index * 200));
+                    });
+                }
+            });
+        }, { threshold: 0.7 });
+
+        document.querySelectorAll('.progress-enterprise').forEach(bar => {
+            progressObserver.observe(bar.closest('.card-enterprise'));
+        });
+
+        // Active navigation link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                const underline = link.querySelector('span');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.style.color = 'rgb(34, 197, 94)';
+                    if (underline) underline.style.width = '100%';
+                } else {
+                    link.style.color = '';
+                    if (underline) underline.style.width = '0%';
+                }
+            });
+        });
+
+        // Enhanced button interactions
+        document.querySelectorAll('.btn-enterprise').forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                btn.style.transform = 'translateY(-4px) scale(1.05)';
+            });
+            
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translateY(0) scale(1)';
+            });
+            
+            btn.addEventListener('mousedown', () => {
+                btn.style.transform = 'translateY(-2px) scale(1.02)';
+            });
+            
+            btn.addEventListener('mouseup', () => {
+                btn.style.transform = 'translateY(-4px) scale(1.05)';
+            });
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroElements = document.querySelectorAll('.hero-enterprise .animate-float');
+            
+            heroElements.forEach((element, index) => {
+                const speed = 0.5 + (index * 0.1);
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Enhanced loading animation
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            
+            // Trigger hero animations
+            setTimeout(() => {
+                document.querySelectorAll('.animate-fade-in').forEach(el => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                });
+            }, 300);
+        });
+
+        // Contact button functionality
+        document.querySelector('.btn-enterprise').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('#contact').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+
+        // Enhanced tech pill interactions
+        document.querySelectorAll('.tech-pill').forEach(pill => {
+            pill.addEventListener('mouseenter', () => {
+                pill.style.transform = 'scale(1.1) rotateZ(3deg)';
+                pill.style.boxShadow = '0 10px 30px rgba(34, 197, 94, 0.3)';
+            });
+            
+            pill.addEventListener('mouseleave', () => {
+                pill.style.transform = 'scale(1) rotateZ(0deg)';
+                pill.style.boxShadow = '';
+            });
+        });
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add stagger animation to cards
+            document.querySelectorAll('.card-enterprise').forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
         });
     </script>
 </body>
